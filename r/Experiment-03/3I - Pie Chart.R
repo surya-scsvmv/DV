@@ -1,2 +1,2 @@
 # Experiment 3I: pie chart of scores at or above the A-grade threshold.
-source("r/common.R"); d<-load_students(); counts<-colSums(d[subjects]>=85); png(save_plot_path("3I_a_grade_pie_chart.png"),900,700,res=140); pie(counts,labels=sprintf("%s: %d",names(counts),counts),main="Students Scoring 85 or Above by Subject",col=c("#4776A8","#55A889","#D98B55"),clockwise=TRUE); dev.off(); print(counts)
+source("r/Experiment-03/common.R"); d<-load_students(); counts<-colSums(d[subjects]>=85); png(save_plot_path("3I_a_grade_pie_chart.png"),900,700,res=140); pie(counts,labels=sprintf("%s: %d",names(counts),counts),main="Students Scoring 85 or Above by Subject",col=c("#4776A8","#55A889","#D98B55"),clockwise=TRUE); dev.off(); print(counts)
