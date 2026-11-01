@@ -32,6 +32,7 @@ class LabTests(unittest.TestCase):
         env = os.environ.copy()
         env["MPLBACKEND"] = "Agg"
         names = [
+            "2A - Basic Matplotlib Plot.py",
             "2B - Line Chart.py",
             "2C - Bar Chart.py",
             "2D - Histogram.py",
