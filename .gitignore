@@ -1,9 +1,0 @@
-__pycache__/
-*.py[cod]
-.Rhistory
-.RData
-.Rproj.user/
-output/*.png
-!output/.gitkeep
-.venv/
-venv/

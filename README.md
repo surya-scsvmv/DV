@@ -1,150 +1,140 @@
-<div align="center">
+# Data Visualization Lab
 
-# DATA VISUALIZATION LAB
+A structured collection of data visualization laboratory experiments using Python and R. The repository includes dataset preparation, statistical analysis, chart creation, and plot-export exercises, organized by experiment number and descriptive title.
 
-**A practical Python and R laboratory for exploring student-performance data.**
+<p>
+  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Language-R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R"/>
+  <img src="https://img.shields.io/badge/Experiments-17-2563EB?style=flat-square" alt="17 exercise files"/>
+  <img src="https://img.shields.io/badge/Includes-Charts%20%26%20Analysis-0F766E?style=flat-square" alt="Charts and analysis"/>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![R](https://img.shields.io/badge/R-4.2%2B-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-visualization-11557C)](https://matplotlib.org/)
-[![Seaborn](https://img.shields.io/badge/Seaborn-statistical%20plots-4C72B0)](https://seaborn.pydata.org/)
-[![ggplot2](https://img.shields.io/badge/ggplot2-R%20graphics-7A9ECA)](https://ggplot2.tidyverse.org/)
+## Contents
 
-</div>
-
----
-
-## Overview
-
-This repository contains hands-on exercises covering data preparation, exploratory analysis, statistical graphics, and plot export. The same student-score dataset is used throughout so that Python and R workflows can be compared consistently.
+| Experiment | Concepts | Programs |
+|---|---|---|
+| **01 — Dataset Preparation** | DataFrames, data validation, summary statistics, CSV files | [1 - Sample Dataset.py](python/Experiment-01/1%20-%20Sample%20Dataset.py) |
+| **02 — Python Visualization** | Matplotlib, Seaborn, line charts, bar charts, histograms, scatter plots, heatmaps, box plots | [2B - Line Chart.py](python/Experiment-02/2B%20-%20Line%20Chart.py), [2C - Bar Chart.py](python/Experiment-02/2C%20-%20Bar%20Chart.py), [2D - Histogram.py](python/Experiment-02/2D%20-%20Histogram.py), [2E - Scatter Plot.py](python/Experiment-02/2E%20-%20Scatter%20Plot.py), [2F - Correlation Heatmap.py](python/Experiment-02/2F%20-%20Correlation%20Heatmap.py), [2G - Box Plot.py](python/Experiment-02/2G%20-%20Box%20Plot.py) |
+| **03 — R Visualization** | R environment, data frames, base graphics, ggplot2, statistical plots | [3A - R Environment Setup.R](r/Experiment-03/3A%20-%20R%20Environment%20Setup.R), [3B - Student Dataset.R](r/Experiment-03/3B%20-%20Student%20Dataset.R), [3C - Base R Bar Chart.R](r/Experiment-03/3C%20-%20Base%20R%20Bar%20Chart.R), [3D - Line Chart.R](r/Experiment-03/3D%20-%20Line%20Chart.R), [3E - Histogram.R](r/Experiment-03/3E%20-%20Histogram.R), [3F - Box Plot.R](r/Experiment-03/3F%20-%20Box%20Plot.R), [3G - Regression Scatter Plot.R](r/Experiment-03/3G%20-%20Regression%20Scatter%20Plot.R), [3H - Grouped Bar Chart.R](r/Experiment-03/3H%20-%20Grouped%20Bar%20Chart.R), [3I - Pie Chart.R](r/Experiment-03/3I%20-%20Pie%20Chart.R) |
+| **04 — Plot Export** | Saving graphics in PNG format using base R and ggplot2 | [4A - Saving Plots.R](r/Experiment-04/4A%20-%20Saving%20Plots.R) |
 
 ## Repository structure
 
 ```text
 DV/
-├── data/student_scores.csv
-├── python/1.py, 2B.py–2G.py, common.py
-├── r/3A.R–3I.R, 4A.R, common.R
+├── data/
+│   ├── README.md
+│   └── student_scores.csv
+├── python/
+│   ├── Experiment-01/
+│   │   └── 1 - Sample Dataset.py
+│   └── Experiment-02/
+│       ├── 2B - Line Chart.py
+│       ├── 2C - Bar Chart.py
+│       ├── 2D - Histogram.py
+│       ├── 2E - Scatter Plot.py
+│       ├── 2F - Correlation Heatmap.py
+│       ├── 2G - Box Plot.py
+│       └── common.py
+├── r/
+│   ├── Experiment-03/
+│   │   ├── 3A - R Environment Setup.R
+│   │   ├── 3B - Student Dataset.R
+│   │   ├── 3C - Base R Bar Chart.R
+│   │   ├── 3D - Line Chart.R
+│   │   ├── 3E - Histogram.R
+│   │   ├── 3F - Box Plot.R
+│   │   ├── 3G - Regression Scatter Plot.R
+│   │   ├── 3H - Grouped Bar Chart.R
+│   │   └── 3I - Pie Chart.R
+│   ├── Experiment-04/
+│   │   └── 4A - Saving Plots.R
+│   └── common.R
 ├── output/
 ├── tests/
-├── requirements.txt
+│   └── test_python_experiments.py
 └── README.md
 ```
 
-## Experiment index
-
-### Python — Pandas, NumPy, Matplotlib and Seaborn
-
-| File | Experiment | Main concepts |
-|---|---|---|
-| [`1.py`](python/1.py) | Student-score dataset | DataFrames, NumPy, validation, CSV export |
-| [`2B.py`](python/2B.py) | Subject score line chart | Multiple series, markers, legends |
-| [`2C.py`](python/2C.py) | Average score bar chart | Aggregation, labels, ranking |
-| [`2D.py`](python/2D.py) | Mathematics histogram | Frequency distribution, mean reference |
-| [`2E.py`](python/2E.py) | Study-hours scatter plot | Correlation, linear trend, annotations |
-| [`2F.py`](python/2F.py) | Correlation heatmap | Correlation matrix, colour encoding |
-| [`2G.py`](python/2G.py) | Subject box plots | Quartiles, spread, outliers |
-
-### R — Base graphics and ggplot2
-
-| File | Experiment | Main concepts |
-|---|---|---|
-| [`3A.R`](r/3A.R) | R environment setup | Package installation and loading |
-| [`3B.R`](r/3B.R) | Student-score dataset | Data frames, validation, CSV export |
-| [`3C.R`](r/3C.R) | Base R bar chart | Subject averages, reference line |
-| [`3D.R`](r/3D.R) | ggplot2 line chart | Long-form data, grouped series |
-| [`3E.R`](r/3E.R) | ggplot2 histogram | Bins, distribution, mean marker |
-| [`3F.R`](r/3F.R) | ggplot2 box plot | Quartiles, jittered observations |
-| [`3G.R`](r/3G.R) | Scatter plot with regression | Linear model, confidence band |
-| [`3H.R`](r/3H.R) | Grouped bar chart | Side-by-side categorical comparison |
-| [`3I.R`](r/3I.R) | A-grade pie chart | Threshold counts, proportions |
-| [`4A.R`](r/4A.R) | Saving plots | PNG export from ggplot2 and base R |
-
-> **Numbering note:** The supplied exercise sequence begins at 2B; no 2A exercise was present. The numbering is intentionally preserved rather than inventing an additional experiment.
-
 ## Dataset
 
-`data/student_scores.csv` contains 10 fictional student records with these fields:
+The shared dataset is stored in `data/student_scores.csv` and contains 10 fictional student records.
 
-- `Student` — student label
-- `Math`, `Science`, `English` — subject marks on a 0–100 scale
-- `Age` — age in years
-- `Hours_Studied` — hours studied per day
+| Column | Description |
+|---|---|
+| `Student` | Student name |
+| `Math`, `Science`, `English` | Subject marks (0–100) |
+| `Age` | Student age in years |
+| `Hours_Studied` | Study hours per day |
 
-The Python and R dataset scripts can regenerate the CSV. Keep the column names unchanged when editing the data because the plotting scripts use them directly.
+## Requirements
 
-## Getting started
+- **Python:** Python 3.10+ with Pandas, NumPy, Matplotlib, and Seaborn.
+- **R:** R 4.2+ with ggplot2, tidyr, dplyr, and RColorBrewer.
+- **Environment:** Python IDE / terminal and an R IDE or Rscript.
 
-### Clone
-
-```bash
-git clone https://github.com/surya-scsvmv/DV.git
-cd DV
-```
-
-### Python
-
-Python 3.10 or later is recommended.
+Install the Python packages with:
 
 ```bash
-python -m venv .venv
+python -m pip install pandas numpy matplotlib seaborn
 ```
 
-Activate with `.venv\\Scripts\\activate` on Windows or `source .venv/bin/activate` on macOS/Linux, then run:
+Run the R environment setup program once to install the required R packages.
+
+## Run the experiments
+
+Run commands from the repository's main directory.
+
+**Python**
 
 ```bash
-pip install -r requirements.txt
-python python/1.py
-python python/2B.py
-python python/2C.py
-python python/2D.py
-python python/2E.py
-python python/2F.py
-python python/2G.py
+python "python/Experiment-01/1 - Sample Dataset.py"
+python "python/Experiment-02/2B - Line Chart.py"
+python "python/Experiment-02/2C - Bar Chart.py"
+python "python/Experiment-02/2D - Histogram.py"
+python "python/Experiment-02/2E - Scatter Plot.py"
+python "python/Experiment-02/2F - Correlation Heatmap.py"
+python "python/Experiment-02/2G - Box Plot.py"
 ```
 
-### R
-
-Install R 4.2 or later. Run the setup script once, then the exercises from the repository root:
+**R**
 
 ```bash
-Rscript r/3A.R
-Rscript r/3B.R
-Rscript r/3C.R
-Rscript r/3D.R
-Rscript r/3E.R
-Rscript r/3F.R
-Rscript r/3G.R
-Rscript r/3H.R
-Rscript r/3I.R
-Rscript r/4A.R
+Rscript "r/Experiment-03/3A - R Environment Setup.R"
+Rscript "r/Experiment-03/3B - Student Dataset.R"
+Rscript "r/Experiment-03/3C - Base R Bar Chart.R"
+Rscript "r/Experiment-03/3D - Line Chart.R"
+Rscript "r/Experiment-03/3E - Histogram.R"
+Rscript "r/Experiment-03/3F - Box Plot.R"
+Rscript "r/Experiment-03/3G - Regression Scatter Plot.R"
+Rscript "r/Experiment-03/3H - Grouped Bar Chart.R"
+Rscript "r/Experiment-03/3I - Pie Chart.R"
+Rscript "r/Experiment-04/4A - Saving Plots.R"
 ```
 
-`3A.R` installs missing packages: `ggplot2`, `tidyr`, `dplyr`, and `RColorBrewer`.
+Generated charts are stored in the `output/` directory.
 
-## Output and tests
+## Lab-submission checklist
 
-Chart images are saved in `output/`. Generated PNG files are ignored by Git so that running exercises does not create noisy commits.
+- [ ] All prescribed experiments are present and numbered correctly.
+- [ ] Each source file has a descriptive title and readable implementation.
+- [ ] The dataset columns and score ranges are validated.
+- [ ] Charts include appropriate titles, axes, labels, and legends.
+- [ ] Generated plot files are checked before attaching them to a lab record.
+- [ ] Programs are executed in the actual lab environment.
 
-Run Python checks from the repository root:
+## Academic context
 
-```bash
-python -m unittest discover -s tests -v
-```
+Data Visualization Laboratory coursework — SCSVMV University, Computer Science and Engineering (AI & Data Science).
 
-## Learning outcomes
+## Related repositories
 
-- Create, inspect, validate, and export tabular datasets.
-- Choose suitable charts for categorical and numerical data.
-- Summarise data with averages, distributions, and correlations.
-- Reshape data between wide and long formats.
-- Build charts with Python and R visualisation libraries.
-- Export plot images for reports and presentations.
+- [Java Programming Lab](https://github.com/surya-scsvmv/JAVA)
+- [DSA in C](https://github.com/surya-scsvmv/DSA)
+- [C++ Programming Lab](https://github.com/surya-scsvmv/CPP)
+- [Design and Analysis of Algorithms](https://github.com/surya-scsvmv/DAA)
+- [DBMS Laboratory](https://github.com/surya-scsvmv/DBMS)
 
 ---
 
-<div align="center">
-
-**Built for learning, experimentation, and reproducible data visualisation.**
-
-</div>
+<p align="center">Prepare the data. Visualize the patterns. Interpret the results.</p>
