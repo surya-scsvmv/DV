@@ -1,0 +1,2 @@
+# Experiment 3E: visualise the mathematics-score distribution.
+source("r/common.R"); library(ggplot2); d<-load_students(); p<-ggplot(d,aes(Math))+geom_histogram(binwidth=8,boundary=0,fill="#6C8EBF",colour="white")+geom_vline(xintercept=mean(d$Math),colour="#C65353",linetype="dashed",linewidth=1)+labs(title="Distribution of Mathematics Scores",x="Math score",y="Number of students")+theme_classic(); ggsave(save_plot_path("3E_math_histogram.png"),p,width=8,height=5,dpi=180); print(p)
